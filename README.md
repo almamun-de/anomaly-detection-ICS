@@ -9,13 +9,29 @@ This project focuses on detecting anomalies in Industrial Control Systems (ICS) 
 Industrial Control Systems (ICS) are critical for infrastructure sectors like power generation, water treatment, and manufacturing. However, cyber threats targeting ICS have been increasing. Traditional IT security measures are not sufficient due to the deterministic nature of Operational Technology (OT). This study aims to improve Intrusion Detection Systems (IDS) by developing more effective anomaly detection methods using feature extraction and machine learning models.
 
 📂 Project Structure
-
+anomaly-detection-ICS/
+├── data/                 # Dataset (or links to external sources)
+├── src/                  # Source code files
+│   ├── preprocess.py     # Data preprocessing
+│   ├── feature_extraction.py  # Feature extraction methods (PCA, Autoencoder, N-Grams)
+│   ├── train_models.py   # Training scripts (Statistical, ML, DL models)
+│   ├── evaluate.py       # Model evaluation
+│   ├── toolbox.py        # Toolbox for running experiments
+│   ├── visualization.py  # Data visualization scripts
+├── notebooks/            # Jupyter Notebooks (if applicable)
+├── models/               # Saved trained models
+├── results/              # Evaluation results (plots, metrics, confusion matrices)
+├── README.md             # Project documentation (this file)
+├── requirements.txt      # Dependencies list
+├── .gitignore            # Files to exclude from Git
+├── LICENSE               # License (MIT, Apache, or other)
+└── report/               # Research paper
 
 📊 Dataset
 
 The project uses the HAI Security Dataset to train and evaluate anomaly detection models. The dataset includes sensor and actuator readings from an ICS testbed, labeled with normal and attack states.
 
-🔗 Dataset Source: HAI Security Dataset
+🔗 Dataset Source: [HAI Security Dataset](https://github.com/icsdataset/hai#hai-dataset)
 
 🛠️ Features & Techniques Used
 
