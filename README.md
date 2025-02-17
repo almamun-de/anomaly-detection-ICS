@@ -81,41 +81,6 @@ Kolmogorov-Smirnov (K-S) Statistic
 
 Ensure you have Python 3.x installed along with the required dependencies.
 
-🔹 Install Dependencies
-
-pip install -r requirements.txt
-
-🔹 Run Preprocessing
-
-python src/preprocess.py
-
-🔹 Train a Model
-
-python src/train_models.py --model cnn
-
-🔹 Evaluate the Model
-
-python src/evaluate.py --model cnn
-
-📌 Results & Findings
-
-Statistical detection methods showed high recall but low precision, leading to many false positives.
-
-Autoencoder achieved high anomaly detection performance, but required tuning to reduce false positives.
-
-CNN and ResNet models outperformed traditional classifiers in anomaly detection, making them promising for ICS security.
-
-📝 Future Work
-
-Fine-tune deep learning models to reduce false positives.
-
-Test on additional ICS datasets to improve generalizability.
-
-Implement real-time anomaly detection for ICS environments.
-
-📜 License
-
-This project is licensed under the MIT License – see the LICENSE file for details.
 
 🙌 Acknowledgments
 
