@@ -41,6 +41,7 @@ Autoencoder: Learns data distribution and detects anomalies based on reconstruct
 
 
 🔬 Evaluation Metrics
+
 The performance of the models is evaluated using:
 Precision & Recall
 Confusion Matrix
@@ -48,9 +49,11 @@ Kolmogorov-Smirnov (K-S) Statistic
 
 
 🚀 Installation & Setup
+
 ReadMe files are give for each corresponding python script.
 
 🔹 Prerequisites
+
 Ensure you have Python 3.x installed along with the required dependencies.
 
 🙌 Acknowledgments
