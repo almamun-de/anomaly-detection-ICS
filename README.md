@@ -27,14 +27,17 @@ N-Grams: Captures sequential patterns in sensor readings.
 2️⃣ Anomaly Detection Models
 
 ✅ Statistical Methods
+
 MinMax, Gradient, Steadytime, Histogram, CUSUM, EWMA
 
 ✅ Traditional Machine Learning Classifiers
+
 One-Class SVM, Local Outlier Factor (LOF), Elliptic Envelope (EE)
 Multi-Class SVM, Random Forest (RF), k-Nearest Neighbors (KNN)
 Ensemble Classifier: Combines multiple classifiers (Random, Majority, All)
 
 ✅ Deep Learning Models
+
 Convolutional Neural Network (CNN): Captures spatial patterns in ICS data.
 Residual Neural Network (ResNet): Addresses deep learning vanishing gradient issues.
 Autoencoder: Learns data distribution and detects anomalies based on reconstruction errors.
@@ -57,4 +60,5 @@ ReadMe files are give for each corresponding python script.
 Ensure you have Python 3.x installed along with the required dependencies.
 
 🙌 Acknowledgments
+
 This project was conducted as part of a study project at Brandenburg University of Technology, Germany, under the supervision of Prof. Dr.-Ing. Andriy Panchenko and Asya Mitseva, M.Sc.
