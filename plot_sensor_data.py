@@ -70,22 +70,7 @@ def export_to_pdf(dataset_name, dataset_folder):
             # os.remove(file)  # Optionally remove the PNG file after adding to PDF
 
 
-# Process each dataset
-for file in datasets[dataset_version]:
-    filepath = os.path.join(dataset_folder, file)
-    df = pd.read_csv(filepath)
-
-    if dataset_version == "hai-22.04":
-        attacked_timestamps = df[df['Attack'] == 1]['timestamp' if 'timestamp' in df.columns else 'Timestamp'].tolist()
-    elif "label" in file:
-        attacked_timestamps = df[df['label'] == 1]['timestamp' if 'timestamp' in df.columns else 'Timestamp'].tolist()
-    else:
-        attacked_timestamps = []
-
-    refined_plot_sensor_data(df, attacked_timestamps, df.columns, dataset_version, file)
-
-export_to_pdf(dataset_version, dataset_folder)
-
+#
 '''
 python your_script.py -f "/path/to/dataset_version_folder"
 '''
