@@ -1,3 +1,7 @@
+'''
+python pca.py train.csv_file test.csv_file
+'''
+
 import pandas as pd
 import numpy as np
 import argparse
