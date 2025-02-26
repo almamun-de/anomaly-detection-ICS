@@ -1,3 +1,9 @@
+'''
+enample:
+$ python autoencoder.py -m 'sensor' -f 'train1.csv' 'test1.csv' -v '23.05' -l 'label-test1.csv'
+'''
+
+
 #!/usr/bin/env python
 # coding: utf-8
 
