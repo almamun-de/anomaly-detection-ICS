@@ -1,4 +1,4 @@
-######## BEFORE RUNNING THE PROGRAM ##########
+#### BEFORE RUNNING THE PROGRAM ####
 
 1.Make sure the csv and pcap files to be read are under same directory of the script. 
 
