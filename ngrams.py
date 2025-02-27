@@ -1,3 +1,7 @@
+'''
+python ngrams.py Path_to_CSV_file value_for_N
+'''
+
 import pandas as pd
 import argparse
 
@@ -90,8 +94,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-'''
-python ngrams.py Path_to_CSV_file value_for_N
-'''
+    
