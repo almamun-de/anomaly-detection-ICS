@@ -1,11 +1,4 @@
-############################################################
-######   Usage  #####
-For task2 the codes in 'ks.py' is used.
-Put it under the same folder with the datasets before running.
-Run it on terminal with 'python ks.py -h' for detailed usage.
 
-
-#####   Reference #####
 Used libararies and tools for this task :
     pandas
     numpy
