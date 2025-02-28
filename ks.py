@@ -254,7 +254,23 @@ elif args.version == '22.04':
     test_acturator_df = test_df[test_df.columns[test_df.columns.isin(acturator_list)]]
 
         
+    ks_train_df, ks_test_df = normalize(train_sensor_df, test_sensor_df, scaler)
 
+    ks_train_df = ks_train_df.merge(train_acturator_df,left_index=True, right_index=True)
+    ks_test_df = ks_test_df.merge(test_acturator_df,left_index=True, right_index=True)
+
+
+    ks_test_df = ks_test_df[ks_test_df['Attack'] == 0]
+    ks_test_df = ks_test_df[ks_test_df.columns[ks_test_df.columns!='Attack']]
+
+    ks_train_df = ks_train_df[ks_train_df['Attack'] == 0]
+    ks_train_df = ks_train_df[ks_train_df.columns[ks_train_df.columns!='Attack']]
+
+    ks_df = ks_test(ks_train_df, ks_test_df, acturator_list)
+    filename = 'hai22.04-'+args.file[0]+'-'+args.file[1]
+    filename1 = filename+'-ks.csv'
+    ks_df.to_csv(filename1)
+    
     
 else:
     
@@ -279,4 +295,3 @@ v2 = [p1,p2,p3]
 plt.bar(x2,v2)
 plt.savefig(filename3)
 plt.close()
-
