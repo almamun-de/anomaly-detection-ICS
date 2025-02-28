@@ -1,4 +1,11 @@
+############################################################
+######   Usage  #####
+For task2 the codes in 'ks.py' is used.
+Put it under the same folder with the datasets before running.
+Run it on terminal with 'python ks.py -h' for detailed usage.
 
+
+#####   Reference #####
 Used libararies and tools for this task :
     pandas
     numpy
@@ -46,6 +53,5 @@ For each train or test dataset, the packets containing physical readings for eac
 Generated results are shared with Tutor Asya Mitseva by BTU cloud.
 
 All the intermediate results (dataframe, list, variables) could be accessed by running the Demo_Task3.ipynb file in jupyter notebook.
-
 
 
