@@ -1,0 +1,56 @@
+######## BEFORE RUNNING THE PROGRAM ##########
+
+1.Make sure the csv files to be read are under same directory as the script. 
+
+2.The following libraries are requred:
+	pandas
+	numpy
+	tensorflow
+	sci-kit learn
+	scapy
+	matplotlib
+	argparser
+	functools
+
+
+####### USAGE #######
+
+##1.Merge the dataset and implement k-fold algorithm.##
+
+$ python kfold.py -k INT
+
+This will conbine all the train and test file of hai-23-05 into one single file with k-fold information stored in a new columns 'fold'.
+
+The 'fold' columns indicates to which fold an instance of data belongs. Together with label information it will be used to apply the 3 scenarios listed in the task sheet.  
+
+
+##2.Extract feature from the merged dataset.##
+
+To extract feature from sensor readings, run
+
+$ python feature-packet.py -m 'feature' -f FILE -k INT -s SCENARIO
+
+This will create features from the dataset using autoencoder and save them into a csv file while preserving the 'timestamp','label' and 'fold' columns.
+
+-----------------------------------------------------
+
+To extract feature from network packets, first run
+
+$ python feature-packet.py -m 'packet' -f FILE 
+
+This will create csv files containing original features of network packets, each column represents 1 byte of the packets. The columns of 'timestamp','label' and 'fold' will be kept the same.
+
+After creating the files above, for each newly generated csv file, run
+
+$ python feature-packet.py -m 'feature' -f FILE -k INT -s SCENARIO
+
+This will create features from the dataset using autoencoder and save them into a csv file while preserving the 'timestamp','label' and 'fold' columns.
+
+
+##3.Implementation of classification algorithms.## 
+
+To implement a classifier on the dataset, run
+
+$ python classifier.py -f FILE -k INT -s SCENARIO -c CLASSIFIER
+
+This will apply the selected classifier on the dataset and apply the scenario specified by the user.The script will generate a csv file with 'timestamp','label', 'fold' and 'predicted' columns as result.
