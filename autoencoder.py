@@ -125,27 +125,6 @@ def classifier_predict(data, reconstructed, threshold):
     return predicted
 
 
-# Preprocessing of input sensor readings so they can be fed into the autoencoder
-def sensor_mode_preprocessing(version, train_df, test_df, label_df):
-    if version == '23.05':
-        train_df = train_df[train_df.columns[train_df.columns!='timestamp']]
-        test_df = test_df[test_df.columns[test_df.columns!='timestamp']]
-        label_df = label_df[label_df.columns[label_df.columns!='timestamp']]
-        
-
-    elif version == 'end23.05':
-        train_df = train_df[train_df.columns[train_df.columns!='Timestamp']]
-        test_df = test_df[test_df.columns[test_df.columns!='Timestamp']]
-        label_df = label_df['label']
-        
-
-        
-    elif version == '22.04':
-        train_df = train_df[train_df.columns[train_df.columns!='timestamp']]
-        test_df = test_df[test_df.columns[test_df.columns!='timestamp']]
-        label_df = test_df[test_df.columns[test_df.columns=='Attack']]
-        
-    train_arr = train_df.to_numpy()
     test_arr = test_df.to_numpy()
     label_arr = label_df.to_numpy()
         
