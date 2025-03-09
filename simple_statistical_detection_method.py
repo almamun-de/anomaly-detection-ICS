@@ -1,3 +1,11 @@
+'''
+Run the 'simple_statistical_detection_method.py’ using the command line with the following arguments:
+python sheet2_task1.py train_file.csv test_file.csv method
+
+train_file.csv: Path to the training dataset CSV file.
+test_file.csv: Path to the testing dataset CSV file.
+method: Choose from minmax, gradient, steadytime, or histogram for the anomaly detection method.
+'''
 
 import pandas as pd
 import numpy as np
