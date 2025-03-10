@@ -1,1 +1,19 @@
+This Python script, "feature-importance.py" is designed for assessing and visualizing the importance of features in classification models. It supports various Multi-Class Classifiers, including Random Forest, K-Nearest Neighbors, and SVM, to analyze feature importance based on permutation importance. The script can handle different training and testing scenarios and uses cross-validation for more robust results.
 
+Required Libraries:
+numpy
+pandas
+matplotlib
+scikit-learn
+
+Usage:
+The script requires a CSV file containing the dataset, with features prefixed as 'feature' and a 'label' column. It also requires specifying the training/testing scenario and the number of folds for cross-validation.
+Use a generated CSV file from pca or autoencoder feature extraction.
+
+
+Command Line Syntax:
+python feature-importance.py -f /path_to_csv_file.csv -s [scenario] -k [kfold]
+
+
+Output:
+Bar plot images for each classifier and scenario, saved in a directory named 'feature_importance_plots'.
