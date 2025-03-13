@@ -1,4 +1,13 @@
 
+import numpy as np
+import pandas as pd
+from sklearn import preprocessing
+import keras
+import tensorflow as tf
+import argparse
+import time
+from memory_profiler import memory_usage
+
 # Function to extract features from a dataset using an autoencoder.
 # It applies different scenarios for data filtering and uses k-fold cross-validation.
 def extract_feature(autoencoder, encoder, dataset_df, scenario, k):
