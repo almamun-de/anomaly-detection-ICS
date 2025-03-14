@@ -1,4 +1,13 @@
+Usage:
+Run the script from the command line, providing the path to the CSV file and the value for N.
 
+python ngrams.py [Path_to_CSV_file] [value_for_N]
+
+Arguments
+csv_file: The path to the CSV file containing the physical readings.
+n: The size of the n-gram (an integer).
+
+Example
 python ngrams.py train1.csv 3
 
 
