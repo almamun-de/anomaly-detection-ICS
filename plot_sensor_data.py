@@ -1,3 +1,12 @@
+'''
+python your_script.py -f "/path/to/dataset_version_folder"
+'''
+import pandas as pd
+import os
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
+import argparse
+import glob
 
 # Argument parser setup
 parser = argparse.ArgumentParser(description="Process sensor data from a given dataset version.")
