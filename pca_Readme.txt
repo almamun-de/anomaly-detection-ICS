@@ -15,3 +15,16 @@ The script will generate PCA-transformed CSV files for each β value specified i
 
 This Python script performs Principal Component Analysis (PCA) on provided training and testing datasets to reduce feature dimensions while retaining a significant portion of the variance. It is tailored for datasets with sensor readings and actuator states, excluding specific columns like timestamps and attack/labels.
 
+## Features
+
+- Covariance matrix computation from standardized data.
+- Eigenvalues and eigenvectors calculation for dimensionality reduction.
+- Dataset transformation based on selected principal components.
+- Handling of training and testing datasets through command line arguments.
+- Output PCA-transformed datasets for different variance thresholds (β).
+
+## Prerequisites
+
+- Python 3.x
+- NumPy library
+- Pandas library
