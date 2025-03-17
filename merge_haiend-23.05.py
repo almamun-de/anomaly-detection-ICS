@@ -30,6 +30,14 @@ def merge_files(end_filename, label_filename, output_filename):
     '''The index=False argument ensures that the DataFrame's index is not written to the CSV.'''
 
 
+# Filenames for the first pair
+end_test1_filename = 'end-test1.csv'
+label_test1_filename = 'label-test1.csv'
+output1_filename = 'end-test1-label.csv'
+
+# Filenames for the second pair
+end_test2_filename = 'end-test2.csv'
+label_test2_filename = 'label-test2.csv'
 output2_filename = 'end-test2-label.csv'
 
 # Merging the files
