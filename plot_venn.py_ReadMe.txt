@@ -1,0 +1,30 @@
+plot_venn.py is a Python script designed for generating Venn diagrams to analyze classification errors made by machine learning classifiers. The script creates two types of Venn diagrams:
+
+Task 3(b): Diagram showing instances incorrectly classified by each classifier.
+Task 3(c): Diagram showing instances incorrectly classified with the same wrong label by each classifier.
+
+The diagrams are saved in a PDF file for easy viewing and sharing.
+
+Required libraries:
+numpy
+pandas
+matplotlib
+venn (matplotlib_venn)
+
+
+Usage:
+The script takes command-line arguments for CSV files containing classification results, a scenario number, and a list of classifiers.
+Command Line Arguments:
+-f or --files: The CSV files containing original labels and predicted results. Each file corresponds to a different classifier.
+-s or --scenario: The scenario number applied to the results (e.g., 1, 2, 3).
+-c or --classifier: The names of the classifiers, in the same order as the input files.
+
+
+Command Line Syntax:
+python plot_venn.py -f file1.csv file2.csv file3.csv -s 1 -c classifier1 classifier2 classifier3
+
+This command will process file1.csv, file2.csv, and file3.csv, assuming they correspond to classifier1, classifier2, and classifier2, respectively, under scenario 1.
+
+
+Output:
+The script generates a PDF file named S<scenario>-<classifier1>-<classifier2><classifier3>.pdf, which contains the Venn diagrams for the analysis. The file will be saved in the same directory where the script is located.
