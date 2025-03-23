@@ -43,6 +43,14 @@ def main(csv_file_path):
     print(f"Plot saved as '{output_file}'.")
 
 
+# Command line argument parsing setup
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Plot Classifier Results')
+    parser.add_argument('-f', '--file', required=True, type=str, help='Path to the CSV file')
+    args = parser.parse_args()
+
+    # Execute the main function with provided arguments
+    main(args.file)
 
 # Usage example:
 # python plot-classifier-result.py -f path_to_csv_file.csv
