@@ -1,4 +1,16 @@
+######## BEFORE RUNNING THE PROGRAM ##########
 
+1.Make sure the csv file to be read is under same directory of the script. 
+
+2.The following library is requred:
+	pandas
+	numpy
+	functools
+	argparser
+
+
+
+####### USAGE #######
 
 To get  help information run
 
