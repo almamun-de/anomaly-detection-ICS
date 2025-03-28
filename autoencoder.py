@@ -1,4 +1,20 @@
+'''
+enample:
+$ python autoencoder.py -m 'sensor' -f 'train1.csv' 'test1.csv' -v '23.05' -l 'label-test1.csv'
+'''
 
+
+#!/usr/bin/env python
+# coding: utf-8
+
+import argparse
+import keras
+import tensorflow as tf
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+from scapy.all import *
+import matplotlib.pyplot as plt
 
 
 # The function to create lists of True Positive Rate and False Positive Rate under different thrsholds. The lists will be used to plot ROC Curve.
