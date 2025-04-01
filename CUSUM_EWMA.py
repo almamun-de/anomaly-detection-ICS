@@ -1,10 +1,4 @@
 
-import pandas as pd
-from functools import reduce
-import numpy as np
-import argparse
-
-# Traning procecss of CUSUM
 
 def CUSUM_train(df):
 
