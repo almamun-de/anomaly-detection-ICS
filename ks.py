@@ -1,4 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
 
+
+def ks_statistic(obs_one, obs_two):
+    cdf_one = np.sort(obs_one)
+    cdf_two = np.sort(obs_two)
+
+    i = 0
+    j = 0
     d = 0.0
     fn1 = 0.0
     fn2 = 0.0
