@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-import numpy as np
-import pandas as pd
-from functools import reduce
-import argparse
 
 #Re-create the label for test files. New label indicates the type of attack of an instance of data.
 def test_relabeling(test_df, dur_lst, atk_lst):
