@@ -1,22 +1,4 @@
-import argparse
-import os
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-def main(csv_file_path):
-    # Load the CSV file containing predicted and actual labels
-    predicted_data = pd.read_csv(csv_file_path)
-
-    # Unsupervised classifiers 'predicted' == -1 means attack predicted.
-    if -1 in predicted_data['predicted'].to_numpy():
-        # Convert all non-zero labels to 1
-        predicted_data.loc[predicted_data['label'] != 0, 'label'] = 1
-        # Convert predicted labels of -1 to 1. Because for Unsupervised model, predicted == -1 means attack predicted.
-        predicted_data.loc[predicted_data['predicted'] == -1, 'predicted'] = 1
-        # Convert predicted labels of 1 to 0. Because for Unsupervised model, predicted == 1 means no attack predicted.
-        predicted_data.loc[predicted_data['predicted'] == 1, 'predicted'] = 0
 
     # Calculate classification metrics
     accuracy = accuracy_score(predicted_data['label'], predicted_data['predicted'])
