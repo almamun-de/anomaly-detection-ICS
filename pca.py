@@ -1,16 +1,4 @@
-'''
-python pca.py train.csv_file test.csv_file
-'''
 
-import pandas as pd
-import numpy as np
-import argparse
-
-# Set up argument parser
-parser = argparse.ArgumentParser(description='PCA Feature Reduction')
-parser.add_argument('train_csv', type=str, help='Path to the training CSV file')
-parser.add_argument('test_csv', type=str, help='Path to the testing CSV file')
-args = parser.parse_args()
 
 # Define columns to be excluded
 EXCLUDE_COLUMNS = ["timestamp", "Timestamp", "attack", "Attack", "label", "Label"]
