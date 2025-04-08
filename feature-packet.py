@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-import numpy as np
-import pandas as pd
-from scapy.all import *
-from functools import reduce
-from sklearn import preprocessing
-import keras
-import tensorflow as tf
-import argparse
 
 
 #Using aotoencoder to extract feature from dataset while applying the scenario given.
