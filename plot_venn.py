@@ -1,4 +1,19 @@
+import argparse
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from venn import venn
+from matplotlib.backends.backend_pdf import PdfPages
 
+def create_sets(df_lst):
+    """
+    Creates sets of indices for classification errors for each classifier.
+    Returns:
+    tuple: Two lists of sets.
+           The first list contains sets of indices where predictions were incorrect.
+           The second list contains sets of tuples (index, predicted_label) for incorrect predictions.
+    """
+    sets_1 = []  # sets for task 3(b)
     sets_2 = []  # sets for task 3(c)
 
     for df in df_lst:
