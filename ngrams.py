@@ -1,25 +1,4 @@
-'''
-python ngrams.py Path_to_CSV_file value_for_N
-'''
 
-import pandas as pd
-import argparse
-
-EXCLUDE_COLUMNS = ["timestamp", "Timestamp", "attack", "Attack", "label", "Label"]
-
-
-# Calculate moving average with a window size of n.
-def moving_average(iterable, n):
-    moving_averages = []  # List to store moving averages
-    sum_iter = 0          # Sum of the current window
-    iter_len = len(iterable)
-
-    for i in range(iter_len):
-        sum_iter += iterable[i]  # Add next element from iterable
-        if i >= n - 1:
-            # Calculate average for the current window
-            moving_avg = sum_iter / n
-            moving_averages.append(moving_avg)
 
             # Subtract element leaving the window
             sum_iter -= iterable[i - (n - 1)]
